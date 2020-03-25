@@ -1,5 +1,21 @@
-``mograph``
-===========
+.. raw:: html
+
+   <h1 align="center"> mograph </h1> <br>
+
+.. raw:: html
+
+   <p align="center">
+      <a href="https://mograph.readthedocs.io/">
+         <img alt="GitPoint" title="GitPoint" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="600">
+      </a>
+   </p>
+
+   <p align="center">
+      A dependency graph analysis and processing tool written in Python..
+   </p>
+
+Motivation
+----------
 
 .. image:: https://img.shields.io/codecov/c/github/molamk/mograph
    :target: https://codecov.io/gh/molamk/mograph
@@ -20,19 +36,6 @@
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
    :alt: Code style: black
-
-.. raw:: html
-
-   <p align="center">
-      <a href="https://mograph.readthedocs.io/">
-         <img alt="GitPoint" title="GitPoint" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="600">
-      </a>
-   </p>
-
-A dependency graph analysis and processing tool written in Python..
-
-Motivation
-----------
 
 In a `micro-services <https://microservices.io/>`_ scenario, we usually have multiple services with various dependencies. This give us many advantages such as loose coupling, high maintainability & testability.
 
