@@ -8,20 +8,20 @@ Welcome to mograph's documentation!
 
 A dependency graph analysis and processing tool written in Python.
 
-.. image:: https://img.shields.io/codecov/c/github/molamk/deps
-   :target: https://codecov.io/gh/molamk/deps
+.. image:: https://img.shields.io/codecov/c/github/molamk/mograph
+   :target: https://codecov.io/gh/molamk/mograph
    :alt: codecov
  
-.. image:: https://img.shields.io/circleci/build/github/molamk/deps
-   :target: https://circleci.com/gh/molamk/deps
+.. image:: https://img.shields.io/circleci/build/github/molamk/mograph
+   :target: https://circleci.com/gh/molamk/mograph
    :alt: CircleCI
  
 .. image:: https://img.shields.io/pypi/v/mograph
    :target: https://badge.fury.io/py/mograph
    :alt: PyPI version
  
-.. image:: https://img.shields.io/github/license/molamk/deps
-   :target: https://github.com/molamk/deps/blob/master/LICENSE
+.. image:: https://img.shields.io/github/license/molamk/mograph
+   :target: https://github.com/molamk/mograph/blob/master/LICENSE
    :alt: License
  
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
@@ -53,6 +53,6 @@ Links
 =====
 
 * :ref:`search`
-* Source code: https://github.com/molamk/deps
+* Source code: https://github.com/molamk/mograph
 * Author Website: https://molamk.com
 * Contact: molamk@protonmail.com

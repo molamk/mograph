@@ -3,20 +3,20 @@
 
 A dependency graph analysis and processing tool written in Python..
 
-.. image:: https://img.shields.io/codecov/c/github/molamk/deps
-   :target: https://codecov.io/gh/molamk/deps
+.. image:: https://img.shields.io/codecov/c/github/molamk/mograph
+   :target: https://codecov.io/gh/molamk/mograph
    :alt: codecov
  
-.. image:: https://img.shields.io/circleci/build/github/molamk/deps
-   :target: https://circleci.com/gh/molamk/deps
+.. image:: https://img.shields.io/circleci/build/github/molamk/mograph
+   :target: https://circleci.com/gh/molamk/mograph
    :alt: CircleCI
  
 .. image:: https://img.shields.io/pypi/v/mograph
    :target: https://badge.fury.io/py/mograph
    :alt: PyPI version
  
-.. image:: https://img.shields.io/github/license/molamk/deps
-   :target: https://github.com/molamk/deps/blob/master/LICENSE
+.. image:: https://img.shields.io/github/license/molamk/mograph
+   :target: https://github.com/molamk/mograph/blob/master/LICENSE
    :alt: License
  
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
@@ -60,7 +60,7 @@ You can also clone this repository, install its dependencies and run the tool fr
 .. code-block:: bash
 
    # Clone the repository
-   git clone git@github.com:molamk/deps.git && cd deps
+   git clone git@github.com:molamk/mograph.git && cd mograph
 
    # Install dependencies
    pip install -r requirements.txt

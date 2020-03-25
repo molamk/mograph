@@ -45,7 +45,7 @@ You can also clone the Github repository, install its dependencies and run the t
 .. code-block:: bash
 
    # Clone the repository
-   git clone git@github.com:molamk/deps.git && cd deps
+   git clone git@github.com:molamk/mograph.git && cd deps
 
    # Install dependencies
    pip install -r requirements.txt

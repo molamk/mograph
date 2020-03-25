@@ -15,7 +15,7 @@ setup(
     long_description_content_type="text/x-rst",
     author="Mohamed Lamouchi",
     author_email="molamk@protonmail.com",
-    url="https://github.com/molamk/deps",
+    url="https://github.com/molamk/mograph",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
