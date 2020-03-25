@@ -11,11 +11,12 @@
    </p>
 
    <p align="center">
-      A dependency graph analysis and processing tool written in Python..
+      Dependency Graph Analysis and Processing.
    </p>
 
-Motivation
-----------
+
+Introduction
+------------
 
 .. image:: https://img.shields.io/codecov/c/github/molamk/mograph
    :target: https://codecov.io/gh/molamk/mograph
@@ -37,18 +38,20 @@ Motivation
    :target: https://github.com/psf/black
    :alt: Code style: black
 
-In a `micro-services <https://microservices.io/>`_ scenario, we usually have multiple services with various dependencies. This give us many advantages such as loose coupling, high maintainability & testability.
 
-On the other hand, it brings on its own **complexity**. Services have multiple dependencies between each other, and it can quickly get difficult to manage.
-
-Introduction
-------------
 
 This tool allows us to scan a services' spec, then determine in what order we can **start** them or **stop** them. In order to make things faster, we can start or stop them in parallel in some cases. Namely:
 
-
 * Services should be started in parallel if all their dependencies (if any) have already started.
 * Services should be stopped in parallel if all their dependents (if any) have already stopped.
+
+
+Motivation
+----------
+
+In a `micro-services <https://microservices.io/>`_ scenario, we usually have multiple services with various dependencies. This give us many advantages such as loose coupling, high maintainability & testability.
+
+On the other hand, it brings on its own **complexity**. Services have multiple dependencies between each other, and it can quickly get difficult to manage.
 
 Installation
 ------------
