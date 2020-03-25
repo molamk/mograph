@@ -6,7 +6,7 @@
 
    <p align="center">
       <a href="https://mograph.readthedocs.io/">
-         <img alt="GitPoint" title="GitPoint" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="600">
+         <img alt="mograph" title="mograph" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="600">
       </a>
    </p>
 
