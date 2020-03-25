@@ -9,7 +9,7 @@ print(README)
 
 setup(
     name="mograph",
-    version="0.1.4",
+    version="0.1.5",
     description="A Dependency Graph Manager",
     long_description=README,
     long_description_content_type="text/x-rst",
