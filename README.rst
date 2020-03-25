@@ -99,6 +99,10 @@ To run the program, invoke it with either the ``start`` command or ``stop``\ :
 
    mograph start ./services.yaml
 
+   # or (depending on your configuration)
+
+   python3 -m mograph ./services.yaml
+
 The output should be:
 
 .. code-block:: text
