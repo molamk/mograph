@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mograph package &mdash; mograph 0.1.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="mograph" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> mograph
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pages/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/graph-analysis.html">Graph Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/tooling.html">Tooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/testing-methodology.html">Testing Methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/continuous-integration.html">Continuous Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/error-handling.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/tooling.html">Tooling</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mograph</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mograph package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mograph.cli">mograph.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mograph.exceptions">mograph.exceptions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mograph.graph">mograph.graph module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mograph.logger">mograph.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mograph.reader">mograph.reader module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">mograph</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">mograph</a> &raquo;</li>
+        
+      <li>mograph package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mograph.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mograph-package">
+<h1>mograph package<a class="headerlink" href="#mograph-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-mograph.cli">
+<span id="mograph-cli-module"></span><h2>mograph.cli module<a class="headerlink" href="#module-mograph.cli" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-mograph.exceptions">
+<span id="mograph-exceptions-module"></span><h2>mograph.exceptions module<a class="headerlink" href="#module-mograph.exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt id="mograph.exceptions.cyclicgrapherror">
+<span id="mograph.exceptions.CyclicGraphError"></span><em class="property">exception </em><code class="sig-prename descclassname">mograph.exceptions.</code><code class="sig-name descname">CyclicGraphError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">origin</span></em>, <em class="sig-param"><span class="n">destination</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.exceptions.cyclicgrapherror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Error raised when a cycle is detected in the dependency graph.</p>
+<p>In order to “sort” dependencies in the graph, it needs to be a DAG
+(Directed Acyclic Graph).</p>
+<p>This is because if there’s a cycle, we can not determine which nodes comes
+before which and thus ordering becomes impossible.</p>
+<p>We can represent this cycle with a back-edge, by specifying its origin
+and destination vertices.</p>
+<p>An example of cyclic dependency graph specification would be:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="s">&quot;kibana&quot;</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="s">&quot;mysql&quot;</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt id="mograph.exceptions.cyclicgrapherror.origin">
+<span id="mograph.exceptions.CyclicGraphError.origin"></span><code class="sig-name descname">origin</code><a class="headerlink" href="#mograph.exceptions.cyclicgrapherror.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>The origin end of the back-edge causing the cycle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.exceptions.cyclicgrapherror.destination">
+<span id="mograph.exceptions.CyclicGraphError.destination"></span><code class="sig-name descname">destination</code><a class="headerlink" href="#mograph.exceptions.cyclicgrapherror.destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination end of the back-edge causing the cycle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.exceptions.cyclicgrapherror.message">
+<span id="mograph.exceptions.CyclicGraphError.message"></span><code class="sig-name descname">message</code><a class="headerlink" href="#mograph.exceptions.cyclicgrapherror.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human readable string describing the exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt id="mograph.exceptions.undefinedprovidererror">
+<span id="mograph.exceptions.UndefinedProviderError"></span><em class="property">exception </em><code class="sig-prename descclassname">mograph.exceptions.</code><code class="sig-name descname">UndefinedProviderError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">provider</span></em>, <em class="sig-param"><span class="n">consumers</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.exceptions.undefinedprovidererror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Error raised when a service has an undefined dependency.</p>
+<p>In order for the dependency graph to be valid, all dependencies must be
+defined in the YAML specification.</p>
+<p>Let’s say we have a specification that looks like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">dashboard</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="s">&quot;kibana&quot;</span>
+</pre></div>
+</div>
+<p>Here we can see that the service <cite>dashboard</cite> requires <cite>kibana</cite>, but
+<cite>kibana</cite> is not defined as a service.</p>
+<dl class="py attribute">
+<dt id="mograph.exceptions.undefinedprovidererror.provider">
+<span id="mograph.exceptions.UndefinedProviderError.provider"></span><code class="sig-name descname">provider</code><a class="headerlink" href="#mograph.exceptions.undefinedprovidererror.provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>The undefined service required by its dependent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.exceptions.undefinedprovidererror.consumers">
+<span id="mograph.exceptions.UndefinedProviderError.consumers"></span><code class="sig-name descname">consumers</code><a class="headerlink" href="#mograph.exceptions.undefinedprovidererror.consumers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service that requires the undefined dependency.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.exceptions.undefinedprovidererror.message">
+<span id="mograph.exceptions.UndefinedProviderError.message"></span><code class="sig-name descname">message</code><a class="headerlink" href="#mograph.exceptions.undefinedprovidererror.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human readable string describing the exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mograph.graph">
+<span id="mograph-graph-module"></span><h2>mograph.graph module<a class="headerlink" href="#module-mograph.graph" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="mograph.graph.graph">
+<span id="mograph.graph.Graph"></span><em class="property">class </em><code class="sig-prename descclassname">mograph.graph.</code><code class="sig-name descname">Graph</code><a class="headerlink" href="#mograph.graph.graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Directed Graph implementation.</p>
+<p>In order to represent dependencies between our services, we use a Directed
+Graph. This particular implementation follows the Adjacency Matrix model.</p>
+<p>It supports operations such as:
+- Adding a vertex (service).
+- Adding an edge (dependency).
+- Adding an undefined provider (pending service definition).
+- Detecting if there is a cycle.
+- Detecting if the final graph has missing dependencies.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A quick note about consumers and providers:
+- Consumer: A service that has dependencies.
+- Provider: A service that is a dependency of another service.
+- A consumer can have no providers.
+- A provider must have at least one consumer.
+- All providers are also consumers (need to be defined).
+- Not all consumers are providers.</p>
+</div>
+<dl class="py attribute">
+<dt id="mograph.graph.graph.__vertices">
+<span id="mograph.graph.Graph.__vertices"></span><code class="sig-name descname">__vertices</code><a class="headerlink" href="#mograph.graph.graph.__vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Adjacency Matrix containing IDs of vertices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.graph.graph.__undefined_provider_to_consumer_map">
+<span id="mograph.graph.Graph.__undefined_provider_to_consumer_map"></span><code class="sig-name descname">__undefined_provider_to_consumer_map</code><a class="headerlink" href="#mograph.graph.graph.__undefined_provider_to_consumer_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping from undefined (pending) providers to their consumers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.graph.graph.__id_name_map">
+<span id="mograph.graph.Graph.__id_name_map"></span><code class="sig-name descname">__id_name_map</code><a class="headerlink" href="#mograph.graph.graph.__id_name_map" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping between a service’s ID to its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.add_consumer">
+<span id="mograph.graph.Graph.add_consumer"></span><code class="sig-name descname">add_consumer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.add_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a vertex (service) to the graph.</p>
+<p>Works as follows:
+- Generates an ID for the service (the current length of nodes).
+- Add the vertex to the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – The name of the service.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if successful, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.add_dependency">
+<span id="mograph.graph.Graph.add_dependency"></span><code class="sig-name descname">add_dependency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">consumer</span></em>, <em class="sig-param"><span class="n">provider</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.add_dependency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an edge going from the consumer to the provider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>consumer</strong> (<em>str</em>) – The name of the consumer.</p></li>
+<li><p><strong>provider</strong> (<em>str</em>) – The name of the provider.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.add_undefined_provider_for_consumer">
+<span id="mograph.graph.Graph.add_undefined_provider_for_consumer"></span><code class="sig-name descname">add_undefined_provider_for_consumer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">provider</span></em>, <em class="sig-param"><span class="n">consumer</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.add_undefined_provider_for_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a service as pending (undefined provider).</p>
+<p>This means that it has been first seen in a dependencies list, but not
+yet at root level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<em>str</em>) – The name of the undefined provider.</p></li>
+<li><p><strong>consumer</strong> (<em>str</em>) – The name of the consumer.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.get_all_levels">
+<span id="mograph.graph.Graph.get_all_levels"></span><code class="sig-name descname">get_all_levels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.get_all_levels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the layers of the graph to be run in parallel.</p>
+<p>This is responsible for segmenting the graph in different layers
+according to its inner dependencies.</p>
+<ul class="simple">
+<li><p>Each layer is on a “level” of dependents</p></li>
+<li><p>Each layer is a list of services that can be run in parallel.</p></li>
+</ul>
+<p>For example, the following YAML configuration;</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">zookeeper</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="nt">fullhouse</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kibana</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">zookeeper</span>
+</pre></div>
+</div>
+<p>Have these levels for the “start” sequence:
+- [mysql, zookeeper]
+- [kibana]
+- [fullhouse]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Sequence of service batches to be run as start or stop.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.get_consumers_for_undefined_provider">
+<span id="mograph.graph.Graph.get_consumers_for_undefined_provider"></span><code class="sig-name descname">get_consumers_for_undefined_provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.get_consumers_for_undefined_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of consumers dependent on an undefined provider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – The name of the undefined provider.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>All consumers dependent on the given provider.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.has_consumer">
+<span id="mograph.graph.Graph.has_consumer"></span><code class="sig-name descname">has_consumer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.has_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a vertex is in the graph.</p>
+<p>Meaning:
+- Has the service been already defined as a consumer?
+- If the service has been seen in a list of dependencies, it is not
+considered as a vertex yet (pending).</p>
+<p>Works as follows:
+- Generates an ID for the service (the current length of nodes).
+- Add the vertex to the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – The name of the service.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if exists in graph, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.has_edge">
+<span id="mograph.graph.Graph.has_edge"></span><code class="sig-name descname">has_edge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">origin</span></em>, <em class="sig-param"><span class="n">destination</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.has_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if there is an edge between to given vertices in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the edge exists, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.is_undefined_provider">
+<span id="mograph.graph.Graph.is_undefined_provider"></span><code class="sig-name descname">is_undefined_provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.is_undefined_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a service is pending definitions.</p>
+<p>Meaning:
+- The service has been seen in a list of dependencies.
+- The service has not been defined at root yet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – The name of the service.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if in the pending map, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.pop_undefined_provider">
+<span id="mograph.graph.Graph.pop_undefined_provider"></span><code class="sig-name descname">pop_undefined_provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">service_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.pop_undefined_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a services from the pending list (now defined / seen at root).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – The name of the undefined provider.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.reverse_dependencies">
+<span id="mograph.graph.Graph.reverse_dependencies"></span><code class="sig-name descname">reverse_dependencies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.reverse_dependencies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverse a graph’s dependencies.</p>
+<p>We use this when we want to switch from “start” sequence to “stop”
+sequence. This method allows us to reverse without having to write
+“start” or “stop” specific algorithms.</p>
+<p>The <cite>get_all_levels()</cite> works for both, and the transition happens
+with <cite>reverse_dependencies()</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.size">
+<span id="mograph.graph.Graph.size"></span><code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="mograph.graph.graph.validate">
+<span id="mograph.graph.Graph.validate"></span><code class="sig-name descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.graph.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates our graph against the specification.</p>
+<p>This makes sure that the graph is:
+- A DAG (Directed Acyclic Graph) which is necessary condition to order
+its dependencies.
+- A full graph. Meaning that all the services have been defined at
+root level (and not just seen in a dependencies list).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#mograph.exceptions.cyclicgrapherror" title="mograph.exceptions.CyclicGraphError"><strong>CyclicGraphError</strong></a> – If the graph has a cycle.</p></li>
+<li><p><a class="reference internal" href="#mograph.exceptions.undefinedprovidererror" title="mograph.exceptions.UndefinedProviderError"><strong>UndefinedProviderError</strong></a> – If some service has a required but undefined dependency.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="mograph.graph.vertexcolor">
+<span id="mograph.graph.VertexColor"></span><em class="property">class </em><code class="sig-prename descclassname">mograph.graph.</code><code class="sig-name descname">VertexColor</code><a class="headerlink" href="#mograph.graph.vertexcolor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Defines a vertex’s color for cycle detection using DFS.</p>
+<dl class="py attribute">
+<dt id="mograph.graph.vertexcolor.black">
+<span id="mograph.graph.VertexColor.BLACK"></span><code class="sig-name descname">BLACK</code><em class="property"> = 'Vertex has been processed.'</em><a class="headerlink" href="#mograph.graph.vertexcolor.black" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.graph.vertexcolor.gray">
+<span id="mograph.graph.VertexColor.GRAY"></span><code class="sig-name descname">GRAY</code><em class="property"> = 'Vertex is being processed.'</em><a class="headerlink" href="#mograph.graph.vertexcolor.gray" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="mograph.graph.vertexcolor.white">
+<span id="mograph.graph.VertexColor.WHITE"></span><code class="sig-name descname">WHITE</code><em class="property"> = 'Vertex has not been processed yet.'</em><a class="headerlink" href="#mograph.graph.vertexcolor.white" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="mograph.graph.config_to_graph">
+<code class="sig-prename descclassname">mograph.graph.</code><code class="sig-name descname">config_to_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.graph.config_to_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a YAML file’s content into a Directed Graph.</p>
+<p>The main algorithm works as follows:</p>
+<ul class="simple">
+<li><p>Iterate over all services.</p></li>
+<li><p>Add the current service to the graph (as a vertex).</p></li>
+<li><dl class="simple">
+<dt>If the service has been in the pending list:</dt><dd><ul>
+<li><p>Add an edge from each of its dependents to it.</p></li>
+<li><p>Remove it from the pending list.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>If it has dependencies, iterate over all of them.</dt><dd><ul>
+<li><dl class="simple">
+<dt>If the dependency is defined:</dt><dd><ul>
+<li><p>Add an edge from it to the dependency.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Else:</dt><dd><ul>
+<li><p>Add the dependency to the pending list.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> (<em>dict</em>) – The YAML file’s content.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>g</strong> – A dependency graph (that may be invalid).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#mograph.graph.graph" title="mograph.graph.Graph">Graph</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mograph.logger">
+<span id="mograph-logger-module"></span><h2>mograph.logger module<a class="headerlink" href="#module-mograph.logger" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="mograph.logger.get_logger">
+<code class="sig-prename descclassname">mograph.logger.</code><code class="sig-name descname">get_logger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.logger.get_logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-mograph.reader">
+<span id="mograph-reader-module"></span><h2>mograph.reader module<a class="headerlink" href="#module-mograph.reader" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="mograph.reader.load_and_validate_yaml">
+<code class="sig-prename descclassname">mograph.reader.</code><code class="sig-name descname">load_and_validate_yaml</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stream</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mograph.reader.load_and_validate_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads, analyzes &amp; validates a dependency graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stream</strong> (<em>StringIO</em>) – The input file stream.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>g</strong> (<em>Graph</em>) – A valid dependency graph that reflects the services’ spec.</p></li>
+<li><p><em>Exception Handling</em></p></li>
+<li><p><em>——————</em></p></li>
+<li><p><em>yaml.YAMLError</em> – When the YAML syntax is invalid, failed parsing.</p></li>
+<li><p><em>UndefinedProviderError</em> – When a service has an undefined dependency.</p></li>
+<li><p><em>CyclicGraphError</em> – When a graph has a cycle.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="mograph" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mohamed Lamouchi
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

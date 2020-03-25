@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing Methodology &mdash; mograph 0.1.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Continuous Integration" href="continuous-integration.html" />
+    <link rel="prev" title="Tooling" href="tooling.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> mograph
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="graph-analysis.html">Graph Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tooling.html">Tooling</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Testing Methodology</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tdd-test-driven-development">TDD (Test Driven Development)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ci-continuous-integration">CI (Continuous Integration)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-coverage">Test Coverage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="continuous-integration.html">Continuous Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error-handling.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tooling.html">Tooling</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">mograph</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Testing Methodology</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pages/testing-methodology.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="testing-methodology">
+<h1>Testing Methodology<a class="headerlink" href="#testing-methodology" title="Permalink to this headline">¶</a></h1>
+<p>To ensure robustness and compliance with the requirements,
+testing your software is vital. This project was built with
+testability in mind.</p>
+<p>The code was written in a modular fashion, so it’s easier to test
+its components separately.</p>
+<p>Various strategies were implemented to make this step effective
+and with minimal hassle.</p>
+<div class="section" id="tdd-test-driven-development">
+<h2>TDD (Test Driven Development)<a class="headerlink" href="#tdd-test-driven-development" title="Permalink to this headline">¶</a></h2>
+<p>This is actually the main development strategy I chose for this project.
+Writing failing tests first, then implementing just enough to pass them has
+been essential.</p>
+<p>Here is why it was useful:</p>
+<ul class="simple">
+<li><p>Avoiding writing code that won’t be needed after.</p></li>
+<li><p>Having a clear modular API for each component.</p></li>
+<li><p>Actually having tests that keep regression problems easily detectable.</p></li>
+</ul>
+<p>The tests themselves use the <cite>pytest</cite> module, which is the de-facto standard
+testing library for Python. Here’s what a test looks like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_graph_gen_basic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">conf</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mysql&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;deps&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;mysql&quot;</span><span class="p">]}}</span>
+
+    <span class="n">g</span> <span class="o">=</span> <span class="n">config_to_graph</span><span class="p">(</span><span class="n">conf</span><span class="p">)</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+
+    <span class="k">assert</span> <span class="n">g</span><span class="o">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="n">g</span><span class="o">.</span><span class="n">has_consumer</span><span class="p">(</span><span class="s2">&quot;mysql&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">g</span><span class="o">.</span><span class="n">has_consumer</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ci-continuous-integration">
+<h2>CI (Continuous Integration)<a class="headerlink" href="#ci-continuous-integration" title="Permalink to this headline">¶</a></h2>
+<p>In addition to running the tests locally through the development cycle, I
+wanted to have them running in a remote isolated environment too.</p>
+<p>To do that, I integrated a “run tests” step in my <cite>config.yaml</cite> file. This
+step was executed every I pushed code to Github.</p>
+<p>It was especially useful for detecting errors related to the environment,
+like “missing librairies”, “file IO issues”, etc…</p>
+</div>
+<div class="section" id="test-coverage">
+<h2>Test Coverage<a class="headerlink" href="#test-coverage" title="Permalink to this headline">¶</a></h2>
+<p>This was used as a supporting metric for the quality of the tests. Coverage
+in and all by itself does not mean much if the tests are written just for
+the sole purpose of maximizing coverage.</p>
+<p>But when used properly, it can be a guide to “shine the light” on some parts
+of the codebase that may have been overlooked.</p>
+<p>Retrieving coverage reports was also integrated in the CI process through
+<a class="reference external" href="https://codecov.io/">CodeCov</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="continuous-integration.html" class="btn btn-neutral float-right" title="Continuous Integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tooling.html" class="btn btn-neutral float-left" title="Tooling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mohamed Lamouchi
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

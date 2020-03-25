@@ -1,0 +1,378 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Graph Analysis &mdash; mograph 0.1.4 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tooling" href="tooling.html" />
+    <link rel="prev" title="Getting Started" href="getting-started.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> mograph
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Graph Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graph-must-be-acyclic">Graph Must Be Acyclic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graph-must-define-all-nodes">Graph Must Define All Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#graph-representation">Graph Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cycle-detection">Cycle Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#missing-definition-detection">Missing Definition Detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dependency-ordering">Dependency Ordering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reversing-dependencies-for-the-stop-sequence">Reversing Dependencies for the Stop Sequence</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tooling.html">Tooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing-methodology.html">Testing Methodology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuous-integration.html">Continuous Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="error-handling.html">Error Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tooling.html">Tooling</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">mograph</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Graph Analysis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pages/graph-analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="graph-analysis">
+<h1>Graph Analysis<a class="headerlink" href="#graph-analysis" title="Permalink to this headline">¶</a></h1>
+<p>To order services according to their dependencies, the DAG model was the best
+fit. <a class="reference external" href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">Directed Acyclic Graphs</a>
+are composed of vertices (representing services) and edges (representing dependencies).</p>
+<div class="section" id="graph-must-be-acyclic">
+<h2>Graph Must Be Acyclic<a class="headerlink" href="#graph-must-be-acyclic" title="Permalink to this headline">¶</a></h2>
+<p>For our task, the graph needs to be acyclic. This is because if we do have
+a cycle, it becomes impossible to derive an order between dependencies.</p>
+<p>For example, this configuration is not valid:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kibana</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+</pre></div>
+</div>
+<p>We see that <cite>mysql</cite> relies on <cite>kibana</cite>, but at the same time <cite>kibana</cite> relies
+on <cite>mysql</cite>. It becomes impossible to start (or stop) a service because of this.</p>
+</div>
+<div class="section" id="graph-must-define-all-nodes">
+<h2>Graph Must Define All Nodes<a class="headerlink" href="#graph-must-define-all-nodes" title="Permalink to this headline">¶</a></h2>
+<p>In other words, all services in the <cite>yaml</cite> file, need to be defined at “root”
+level. Meaning that if a service is mentioned in a “dependency list” but not
+defined at “root level”, the graph is considered invalid.</p>
+<p>This is because we don’t know if the service mentioned has any dependencies,
+and so we can’t figure out its order in the cluster.</p>
+<p>Here’s an example of an invalid configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
+</pre></div>
+</div>
+<p>As we see, <cite>kibana</cite> needs <cite>elasticsearch</cite>, but since <cite>elasticsearch</cite> was not
+defined at “root” level (only <cite>mysql</cite> &amp; <cite>kibana</cite>), the graph is invalid.</p>
+</div>
+<div class="section" id="graph-representation">
+<h2>Graph Representation<a class="headerlink" href="#graph-representation" title="Permalink to this headline">¶</a></h2>
+<p>The actual graph was implemented as an <a class="reference external" href="https://en.wikipedia.org/wiki/Adjacency_matrix">Adjacency Matrix</a>.
+Each service is given a numerical ID and put in the matrix. This was done to
+accelerate the graph’s processing, so we “compare” numbers instead of whole strings.</p>
+<p>Here’s an example of a graph representation:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="nt">elasticsearch</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kibana</span>
+</pre></div>
+</div>
+<p>Its representation looks like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Name - ID map
+{ &quot;mysql&quot;: 0, &quot;kibana&quot;: 1, &quot;elasticsearch&quot;: 2 }
+
+# Actual Graph
+[ [], [0], [1] ]
+</pre></div>
+</div>
+<p>If a specification has “missing definitions”, it was put in another “pending”
+map that linked it to its “dependents”.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">elasticsearch</span>
+</pre></div>
+</div>
+<p>Give use the following structure:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Name - ID map
+{ &quot;mysql&quot;: 0, &quot;kibana&quot;: 1, &quot;elasticsearch&quot;: 2 }
+
+# Actual Graph
+[ [], [] ]
+
+# Pending Map
+{ 2: [1] }
+</pre></div>
+</div>
+</div>
+<div class="section" id="cycle-detection">
+<h2>Cycle Detection<a class="headerlink" href="#cycle-detection" title="Permalink to this headline">¶</a></h2>
+<p>For this task, I chose the ` Graph Coloring &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Graph_coloring">https://en.wikipedia.org/wiki/Graph_coloring</a>&gt;`_
+technique. I prefer this technique because it is intuitive and efficient.</p>
+<p>It’s a “modified” DFS (Depth First Search) traversal. The colors are:</p>
+<ul class="simple">
+<li><p>White: unprocessed node</p></li>
+<li><p>Gray: node is being processed</p></li>
+<li><p>Black; node has been processed</p></li>
+</ul>
+<p>Here’s how the algorithm works:</p>
+<ul class="simple">
+<li><p>Start with all nodes as “white”</p></li>
+<li><p>Choose a node &amp; mark it as “gray”</p></li>
+<li><dl class="simple">
+<dt>For each of its neighbors:</dt><dd><ul>
+<li><p>If the neighbor is “gray”, then it means we’ve seen it in this traversal, which is equivalent to a cycle</p></li>
+<li><p>If it’s “white”, but any of it’s children has a cycle, then we also have a cycle</p></li>
+<li><p>If neither, all good</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>We do this recursively</p></li>
+<li><p>At the end of processing a node, mark it as “black”</p></li>
+</ul>
+</div>
+<div class="section" id="missing-definition-detection">
+<h2>Missing Definition Detection<a class="headerlink" href="#missing-definition-detection" title="Permalink to this headline">¶</a></h2>
+<p>This is a trivial task since we already keep a map containing missing
+definitions. We just have to check if the map is empty, then we’re good.</p>
+</div>
+<div class="section" id="dependency-ordering">
+<h2>Dependency Ordering<a class="headerlink" href="#dependency-ordering" title="Permalink to this headline">¶</a></h2>
+<p>This was also implemented as a “modified DFS traversal”, here’s how:</p>
+<ul class="simple">
+<li><p>At root, the level is always “0”</p></li>
+<li><p>We choose any node</p></li>
+<li><p>Recurse on its dependencies</p></li>
+<li><p>Give current node -&gt; level = max(dep_lvl_1, dep_lvl_2,…) + 1</p></li>
+</ul>
+<p>Since the algorithm is recusive, I also used the “memorization” technique so
+we don’t process a node multiple times.</p>
+<p>Here’s an example of execution:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">zookeeper</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">kibana</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mysql</span>
+<span class="nt">fullhouse</span><span class="p">:</span>
+    <span class="nt">deps</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">kibana</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">zookeeper</span>
+</pre></div>
+</div>
+<p>This will give us the following starting sequence:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[&#39;mysql&#39;, &#39;zookeeper&#39;]
+[&#39;kibana&#39;]
+[&#39;fullhouse&#39;]
+</pre></div>
+</div>
+</div>
+<div class="section" id="reversing-dependencies-for-the-stop-sequence">
+<h2>Reversing Dependencies for the Stop Sequence<a class="headerlink" href="#reversing-dependencies-for-the-stop-sequence" title="Permalink to this headline">¶</a></h2>
+<p>To derive to the stop sequence, we just need to reverse the dependencies.
+In other words, we reverse the direction of the edges.</p>
+<p>To do that, we just put the new destinations at the place of old origins,
+and vice-versa.</p>
+<p>Then we call the same method responsible for ordering our dependencies, which
+would give us the following stop sequence:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[&#39;fullhouse&#39;]
+[&#39;zookeeper&#39;, &#39;kibana&#39;]
+[&#39;mysql&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tooling.html" class="btn btn-neutral float-right" title="Tooling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Mohamed Lamouchi
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
