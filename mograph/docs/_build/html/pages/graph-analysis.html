@@ -98,6 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="continuous-integration.html">Continuous Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error-handling.html">Error Handling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tooling.html">Tooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">mograph</a></li>
 </ul>
 
             
@@ -284,10 +285,10 @@ definitions. We just have to check if the map is empty, then we’re good.</p>
 <ul class="simple">
 <li><p>At root, the level is always “0”</p></li>
 <li><p>We choose any node</p></li>
-<li><p>Recurse on its dependencies</p></li>
+<li><p>Do this recursively on its dependencies</p></li>
 <li><p>Give current node -&gt; level = max(dep_lvl_1, dep_lvl_2,…) + 1</p></li>
 </ul>
-<p>Since the algorithm is recusive, I also used the “memorization” technique so
+<p>Since the algorithm is recursive, I also used the “memorization” technique so
 we don’t process a node multiple times.</p>
 <p>Here’s an example of execution:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">mysql</span><span class="p">:</span>

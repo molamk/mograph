@@ -140,10 +140,10 @@ This was also implemented as a "modified DFS traversal", here's how:
 
 - At root, the level is always "0"
 - We choose any node
-- Recurse on its dependencies
+- Do this recursively on its dependencies
 - Give current node -> level = max(dep_lvl_1, dep_lvl_2,...) + 1
 
-Since the algorithm is recusive, I also used the "memorization" technique so
+Since the algorithm is recursive, I also used the "memorization" technique so
 we don't process a node multiple times.
 
 Here's an example of execution:

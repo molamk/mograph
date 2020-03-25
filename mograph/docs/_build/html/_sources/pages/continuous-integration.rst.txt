@@ -10,7 +10,7 @@ This gives us an isolated, reproducible environment, in which we run multiple st
 2. Install the project's dependencies
 3. Run the test suite
 4. Collect testing coverage
-5. Send the coverge results to `CodeCov <https://codecov.io/>`_
+5. Send the coverage results to `CodeCov <https://codecov.io/>`_
 6. If any of the steps fail, all fails & an email is sent
 
 Pipeline Specification

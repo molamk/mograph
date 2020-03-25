@@ -49,7 +49,7 @@ To do that, I integrated a "run tests" step in my `config.yaml` file. This
 step was executed every I pushed code to Github.
 
 It was especially useful for detecting errors related to the environment,
-like "missing librairies", "file IO issues", etc...
+like "missing libraries", "file IO issues", etc...
 
 Test Coverage
 -------------

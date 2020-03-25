@@ -47,8 +47,8 @@ You can also clone the Github repository, install its dependencies and run the t
    # Clone the repository
    git clone git@github.com:molamk/mograph.git && cd deps
 
-   # Install dependencies
-   pip install -r requirements.txt
+   # Install the project
+   python3 setup.py develop
 
 Usage
 -----

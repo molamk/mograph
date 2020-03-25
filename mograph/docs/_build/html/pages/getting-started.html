@@ -80,7 +80,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Overview:</span></p>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#motivation">Motivation</a></li>
@@ -99,6 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="continuous-integration.html">Continuous Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error-handling.html">Error Handling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tooling.html">Tooling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">mograph</a></li>
 </ul>
 
             
@@ -200,8 +201,8 @@ was chosen to ensure a robust virtual environment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository</span>
 git clone git@github.com:molamk/mograph.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> deps
 
-<span class="c1"># Install dependencies</span>
-pip install -r requirements.txt
+<span class="c1"># Install the project</span>
+python3 setup.py develop
 </pre></div>
 </div>
 </div>
