@@ -1,8 +1,6 @@
 ``mograph``
 ===========
 
-A dependency graph analysis and processing tool written in Python..
-
 .. image:: https://img.shields.io/codecov/c/github/molamk/mograph
    :target: https://codecov.io/gh/molamk/mograph
    :alt: codecov
@@ -27,10 +25,11 @@ A dependency graph analysis and processing tool written in Python..
 
    <p align="center">
       <a href="https://mograph.readthedocs.io/">
-         <img alt="GitPoint" title="GitPoint" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="450">
+         <img alt="GitPoint" title="GitPoint" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="600">
       </a>
    </p>
 
+A dependency graph analysis and processing tool written in Python..
 
 Motivation
 ----------
