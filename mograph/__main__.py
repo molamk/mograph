@@ -4,7 +4,7 @@ from click import ClickException, Abort
 
 logger = get_logger(__name__)
 
-if __name__ == "__main__":
+def main():
     """
     Main entry point, fires off the CLI.
 
@@ -33,3 +33,6 @@ if __name__ == "__main__":
     except Abort as e:
         logger.error("Program has been aborted - shutting down...")
         logger.critical(e)
+
+if __name__ == "__main__":
+    main()
