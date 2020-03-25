@@ -23,6 +23,14 @@ A dependency graph analysis and processing tool written in Python..
    :target: https://github.com/psf/black
    :alt: Code style: black
 
+..raw:: html
+
+   <p align="center">
+      <a href="https://mograph.readthedocs.io/">
+         <img alt="GitPoint" title="GitPoint" src="https://media.giphy.com/media/RJQ9uP1UFnWO5xU9jX/giphy.gif" width="450">
+      </a>
+   </p>
+
 
 Motivation
 ----------
